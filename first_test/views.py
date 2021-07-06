@@ -30,7 +30,7 @@ def postsign(request):
     print(user['idToken'])
     session_id = user['idToken']
     request.session['uid'] = str(session_id)
-    return render(request, "Welcome.html", {"email":email})
+    return render(request, "welcome.html", {"email":email})
 
 def logout(request):
     auth.logout(request)
