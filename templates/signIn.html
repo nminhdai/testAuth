@@ -3,6 +3,7 @@
     alert('{{message}}');
 </script>
 {% endif %}
+{% load staticfiles %}
 <!doctype html>
 <html lang="en">
     <head>
@@ -11,7 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <!--icon-->
-        <link rel="icon" href="images/title-img.png">
+        <link rel="icon" href="/static/images/title-img.png">
         <!--bootstrap.min.css-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
         <!--fontawesome-->
@@ -19,7 +20,7 @@
         <!--font-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat"rel="stylesheet">
         <!--style.css-->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="{% static "style.css" %}">
         <title>PhotoX</title>
     </head>
     <body>
@@ -122,7 +123,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-5 text-center">
-                        <img src="images/camera.png"width="350"class="img-fluid camera-img">
+                        <img src="/static/images/camera.png"width="350"class="img-fluid camera-img">
                     </div>
                     <div class="col-lg-7 text-white text-lg-right text-center mission-text">
                         <h1> We know what we do</h1>
@@ -152,7 +153,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 my-5">
                         <div class="card border-0 card-shadow">
-                            <img src="images/nature.jpeg" class="card-img">
+                            <img src="/static/images/nature.jpeg" class="card-img">
                             <div class="card-img-overlay">
                                 <h5 class="text-white text-uppercase font-weight-bold p-2 heading">Nature Photography</h5>
                             </div>
@@ -160,7 +161,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 my-5">
                         <div class="card border-0 card-shadow">
-                            <img src="images/wedding.jpeg" class="card-img">
+                            <img src="/static/images/wedding.jpeg" class="card-img">
                             <div class="card-img-overlay">
                                 <h5 class="text-white text-uppercase font-weight-bold p-2 heading">Wedding Photography</h5>
                             </div>
@@ -168,7 +169,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 my-5">
                         <div class="card border-0 card-shadow">
-                            <img src="images/party.jpeg" class="card-img">
+                            <img src="/static/images/party.jpeg" class="card-img">
                             <div class="card-img-overlay">
                                 <h5 class="text-white text-uppercase font-weight-bold p-2 heading">Party Photography</h5>
                             </div>
@@ -176,7 +177,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 my-5">
                         <div class="card border-0 card-shadow">
-                            <img src="images/business.jpeg" class="card-img">
+                            <img src="/static/images/business.jpeg" class="card-img">
                             <div class="card-img-overlay">
                                 <h5 class="text-white text-uppercase font-weight-bold p-2 heading">Business Photography</h5>
                             </div>
@@ -184,7 +185,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 my-5">
                         <div class="card border-0 card-shadow">
-                            <img src="images/fashion.jpeg" class="card-img">
+                            <img src="/static/images/fashion.jpeg" class="card-img">
                             <div class="card-img-overlay">
                                 <h5 class="text-white text-uppercase font-weight-bold p-2 heading">Fashion Photography</h5>
                             </div>
@@ -192,7 +193,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 my-5">
                         <div class="card border-0 card-shadow">
-                            <img src="images/family.jpeg" class="card-img">
+                            <img src="/static/images/family.jpeg" class="card-img">
                             <div class="card-img-overlay">
                                 <h5 class="text-white text-uppercase font-weight-bold p-2 heading">Family Photography</h5>
                             </div>
@@ -238,37 +239,37 @@
                 </ul>
                 <div class="container-fluid">
                     <div class="d-flex flex-wrap justify-content-center">
-                        <div class="filter new"><img src="images/img1.jpeg"width="300">
+                        <div class="filter new"><img src="/static/images/img1.jpeg"width="300">
                         </div>
-                        <div class="filter free"><img src="images/img2.jpeg"width="300">
+                        <div class="filter free"><img src="/static/images/img2.jpeg"width="300">
                         </div>
-                        <div class="filter pro"><img src="images/img3.jpeg"width="300">
+                        <div class="filter pro"><img src="/static/images/img3.jpeg"width="300">
                         </div>
-                        <div class="filter new"><img src="images/img4.jpeg"width="300">
+                        <div class="filter new"><img src="/static/images/img4.jpeg"width="300">
                         </div>
-                        <div class="filter pro"><img src="images/img5.jpeg"width="300">
+                        <div class="filter pro"><img src="/static/images/img5.jpeg"width="300">
                         </div>
-                        <div class="filter free"><img src="images/img6.jpeg"width="300">
+                        <div class="filter free"><img src="/static/images/img6.jpeg"width="300">
                         </div>
-                        <div class="filter pro"><img src="images/img7.jpeg"width="300">
+                        <div class="filter pro"><img src="/static/images/img7.jpeg"width="300">
                         </div>
-                        <div class="filter free"><img src="images/img8.jpeg"width="300">
+                        <div class="filter free"><img src="/static/images/img8.jpeg"width="300">
                         </div>
-                        <div class="filter new"><img src="images/img9.jpeg"width="300">
+                        <div class="filter new"><img src="/static/images/img9.jpeg"width="300">
                         </div>
-                        <div class="filter pro"><img src="images/img10.jpeg"width="300">
+                        <div class="filter pro"><img src="/static/images/img10.jpeg"width="300">
                         </div>
-                        <div class="filter free"><img src="images/img11.jpeg"width="300">
+                        <div class="filter free"><img src="/static/images/img11.jpeg"width="300">
                         </div>
-                        <div class="filter pro"><img src="images/img12.jpeg"width="300">
+                        <div class="filter pro"><img src="/static/images/img12.jpeg"width="300">
                         </div>
-                        <div class="filter new"><img src="images/img13.jpeg"width="300">
+                        <div class="filter new"><img src="/static/images/img13.jpeg"width="300">
                         </div>
-                        <div class="filter free"><img src="images/img14.jpeg"width="300">
+                        <div class="filter free"><img src="/static/images/img14.jpeg"width="300">
                         </div>
-                        <div class="filter new"><img src="images/img15.jpeg"width="300">
+                        <div class="filter new"><img src="/static/images/img15.jpeg"width="300">
                         </div>
-                        <div class="filter pro"><img src="images/img16.jpeg"width="300">
+                        <div class="filter pro"><img src="/static/images/img16.jpeg"width="300">
                         </div>
                     </div>
                 </div>
@@ -299,7 +300,7 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="carousel-item active text-center">
-                                    <img src="images/customer1.jpeg"
+                                    <img src="/static/images/customer1.jpeg"
                                     class="img-fluid rounded-circle m-5" width="150">
                                         <blockquote class="blockquote text-white">
                                             <p class="mb-5">
@@ -333,7 +334,7 @@
                                         </ul>
                                 </div>
                                 <div class="carousel-item text-center">
-                                    <img src="images/customer2.jpeg"
+                                    <img src="/static/images/customer2.jpeg"
                                     class="img-fluid rounded-circle m-5" width="150">
                                         <blockquote class="blockquote text-white">
                                             <p class="mb-5">
@@ -367,7 +368,7 @@
                                         </ul>
                                 </div>
                                 <div class="carousel-item text-center">
-                                    <img src="images/customer3.jpeg"
+                                    <img src="/static/images/customer3.jpeg"
                                     class="img-fluid rounded-circle m-5" width="150">
                                         <blockquote class="blockquote text-white">
                                             <p class="mb-5">
@@ -612,6 +613,6 @@
 crossorigin="anonymous"></script>  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha256-98vAGjEDGN79TjHkYWVD4s87rvWkdWLHPs5MC3FvFX4=" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-        <script src="script.js"></script>
+        <script src="{% static 'script.js' %}"></script>
     </body>
 </html>
