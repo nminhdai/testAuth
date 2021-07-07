@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-o=j*i(rnhzdf$j*%6x@&xl^+-p!sovw!^x%b48p4jcp5a=%voz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['evening-journey-98020.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['photo4you.herokuapp.com','127.0.0.1']
 
 
 # Application definition
