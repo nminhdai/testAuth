@@ -26,4 +26,7 @@ urlpatterns = [
     url(r'^logout/', views.logout, name="logout"),
     url(r'^signup/', views.signUp, name="signup"),
     url(r'^postsignup/', views.postsignup, name="postsignup"),
+    
 ]
+if settings.DEBUG:
+     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
