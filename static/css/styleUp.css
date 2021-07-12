@@ -98,9 +98,9 @@ form input[type="radio"] {
   background-position: right;
 }
 
-@media (max-width: 584px) {
+@media only screen and (max-device-width: 584px) {
   .container {
-    max-width: 100%;
+    max-width: 90%;
     margin: 0 1em;
   }
   form .user-details .input-box {
