@@ -10,7 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
+from django.contrib import messages
 from pathlib import Path
+import sys
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,8 +27,10 @@ SECRET_KEY = 'django-insecure-o=j*i(rnhzdf$j*%6x@&xl^+-p!sovw!^x%b48p4jcp5a=%voz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['photo4you.herokuapp.com','127.0.0.1']
+TESTING = len(sys.argv) > 1 and sys.argv[1] == 'test'
 
+ALLOWED_HOSTS = ['photo4you.herokuapp.com','127.0.0.1']
+AUTH_USER_MODEL = "authentication.User"
 
 # Application definition
 
@@ -37,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'authentication'
 ]
 
 MIDDLEWARE = [
@@ -54,7 +59,7 @@ ROOT_URLCONF = 'first_test.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,3 +130,15 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
+
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_HOST_USER='newlife200701@gmail.com'
+EMAIL_HOST_PASSWORD='592429a592429a'
+EMAIL_USE_TLS=True
+EMAIL_PORT=587
+ACCOUNT_EMAIL_VERIFICATION='none'
+
+LOGIN_URL='login'
+LOGIN_REDIRECT_URL='home'
+LOGOUT_URL='logout'
+LOGOUT_REDIRECT_URL='login'

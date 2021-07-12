@@ -1,0 +1,50 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+<div class="container">
+    <div class="title">Registration</div>
+    {% if messages %}
+    {% for message in messages %}
+    {{ message }}
+    {% endfor %}
+    {% endif %}
+    <form action="{% url 'register'%}" method="post">
+        {% csrf_token %}
+        <div class="user-details">
+            <!-- Username -->
+            <div class="input-box">
+                <span class="details">Username</span>
+                <input type="text" class="input" placeholder="Enter your username" name="username" value="{{data.username}}" required />
+            </div>
+
+            <!-- Email -->
+            <div class="input-box">
+                <span class="details">Email</span>
+                <input type="email" class="input" placeholder="Enter your email" name="email" value="{{data.email}}" required />
+            </div>
+
+            <!-- Password -->
+            <div class="input-box">
+                <span class="details">Password</span>
+                <input type="password" class="input" placeholder="Enter your password" name="password" required />
+            </div>
+        
+            <!-- Confirm pass -->
+            <div class="input-box">
+                <span class="details">Confirm Password</span>
+                <input type="password" class="input" placeholder="Re-type your password" name="password2" required />
+            </div>
+        </div>
+
+        <div class="button">
+            <input type="submit" value="SignUp" class="btn" />
+        </div>
+
+        <div class="">
+            <p>
+                Already had an account? <a href="{% url 'login' %}">Login</a>
+            </p>
+        </div>
+    </form>
+</div>
+{%endblock%}

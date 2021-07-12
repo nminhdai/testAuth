@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+<div class="container">
+    <div class="title">Registration</div>
+    <form action="{% url 'login'%}" method="post">
+        {% csrf_token %}
+        <div class="user-details">
+            {% if messages %}
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+            {% endif %}
+            <!-- Username -->
+            <div class="input-box">
+                <span class="details">Username</span>
+                <input type="text" class="input" placeholder="Enter your username" name="username"
+                    value="{{data.username}}" required />
+                
+            </div>
+
+            <!-- Password -->
+            <div class="input-box">
+                <span class="details">Password</span>
+                <input type="password" class="input" placeholder="Enter your password" name="password" required />
+            </div>
+        </div>
+        <div class="button">
+            <input type="submit" value="Login" class="btn" />
+        </div>
+        <div class="">
+            <p>
+                Need an account?  <a href="{% url 'register' %}">Register</a>
+            </p>    
+        </div>
+    </form>
+</div>
+{%endblock%}
