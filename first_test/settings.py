@@ -29,7 +29,7 @@ DEBUG = True
 
 TESTING = len(sys.argv) > 1 and sys.argv[1] == 'test'
 
-ALLOWED_HOSTS = ['photo4you.herokuapp.com','127.0.0.1','oldbook4newlife.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','oldbook4newlife.herokuapp.com']
 AUTH_USER_MODEL = "authentication.User"
 
 # Application definition
