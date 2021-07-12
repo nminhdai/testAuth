@@ -1,6 +1,15 @@
-{%extends 'base.html'%}
-{%load static%}
-{%block content%}
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="{% static 'css/styleUp.css'%}" />
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+</head>
+
+<body>
 <div class="container">
     <div class="title">Registration</div>
     <form action="{% url 'login'%}" method="post">
@@ -8,7 +17,7 @@
         <div class="user-details">
             {% if messages %}
             {% for message in messages %}
-                {{ message }}
+            {{ message }}
             {% endfor %}
             {% endif %}
             <!-- Username -->
@@ -16,7 +25,7 @@
                 <span class="details">Username</span>
                 <input type="text" class="input" placeholder="Enter your username" name="username"
                     value="{{data.username}}" required />
-                
+
             </div>
 
             <!-- Password -->
@@ -30,9 +39,11 @@
         </div>
         <div class="">
             <p>
-                Need an account?  <a href="{% url 'register' %}">Register</a>
-            </p>    
+                Need an account? <a href="{% url 'register' %}">Register</a>
+            </p>
         </div>
     </form>
 </div>
-{%endblock%}
+</body>
+
+</html>
