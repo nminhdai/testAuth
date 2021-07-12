@@ -13,9 +13,20 @@
 <div class="container">
     <div class="title">Registration</div>
     {% if messages %}
-    {% for message in messages %}
-    {{ message }}
-    {% endfor %}
+    {%for mess in messages%}
+    {% if mess.tags == 'error'%}
+    <div class="fail__alert">
+        <span class="fail__alert-icon fas fa-exclamation-circle"></span>
+        <p class="fail__alert-msg">{{ mess }}</p>
+    </div>
+    {%endif%}
+    {% if mess.tags == 'success'%}
+    <div class="success__alert">
+        <span class="success__alert-icon fas fa-check-circle"></span>
+        <p class="success__alert-msg">{{ mess }}</p>
+    </div>
+    {%endif%}
+    {%endfor%}
     {% endif %}
     <form action="{% url 'register'%}" method="post">
         {% csrf_token %}
